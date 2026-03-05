@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IITP Hostel Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="https://www.iitp.ac.in/images/logo.png" alt="IITP Logo" class="logo">
+            <h1>IITP Hostel Portal</h1>
+            <p>Login with your IITP email only</p>
+
+            <div id="error-msg" class="error-msg"></div>
+
+            <input type="email" id="email" placeholder="yourname@iitp.ac.in" />
+            <input type="password" id="password" placeholder="Password" />
+
+            <button onclick="loginUser()">Login</button>
+            <button class="register-btn" onclick="registerUser()">Register</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

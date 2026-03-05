@@ -1,0 +1,9 @@
+# Firebase config - DO NOT push to GitHub
+js/firebase-config.js
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
