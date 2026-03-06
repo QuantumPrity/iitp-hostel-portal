@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - IITP Hostel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- NAVBAR AT TOP -->
+    <nav class="navbar">
+        <div class="nav-logo">🏠 IITP Hostel Portal</div>
+        <div class="nav-user">
+            <div class="profile-circle">P</div>
+            <button onclick="logoutUser()">Logout</button>
+        </div>
+    </nav>
+
+    <!-- CENTERED CONTENT -->
+    <div class="dashboard-container">
+        <h2>Welcome! 👋</h2>
+        <p class="subtitle">What would you like to do today?</p>
+
+        <div class="cards-grid">
+            <div class="card" onclick="window.location.href='complaints.html'">
+                <div class="card-icon">🔧</div>
+                <h3>Complaints</h3>
+                <p>Submit or track your complaints</p>
+            </div>
+
+            <div class="card" onclick="window.location.href='notices.html'">
+                <div class="card-icon">📢</div>
+                <h3>Notices</h3>
+                <p>View latest hostel notices</p>
+            </div>
+
+            <div class="card" onclick="window.location.href='cleanliness.html'">
+                <div class="card-icon">🧹</div>
+                <h3>Cleanliness</h3>
+                <p>Check room cleanliness status</p>
+            </div>
+
+            <div class="card" onclick="window.location.href='feedback.html'">
+                <div class="card-icon">📝</div>
+                <h3>Feedback</h3>
+                <p>Share anonymous feedback</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+
+</body>
+</html>
