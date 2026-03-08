@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notices - IITP Hostel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/notices.css">
+</head>
+
+<body>
+    <div class="particles">
+        <div class="particles"></div>
+        <div class="particles"></div>
+        <div class="particles"></div>
+        <div class="particles"></div>
+        <div class="particles"></div>
+        <div class="particles"></div>
+        <div class="particles"></div>
+        <div class="particles"></div>
+    </div>
+
+    <!-- Navbar -->
+     <nav class="navbar">
+        <div class="nav-logo">
+            <a href="dashboard.html">🏠 IITP Hostel Portal</a>
+        </div>
+        <div class="nav-user">
+            <div class="profile-circle">P</div>
+            <button onclick="logoutUser()">Logout</button>
+        </div>
+     </nav>
+
+     <!-- MAIN CONTENT -->
+      <div class="notices-container">
+
+        <div class="notices-header">
+            <h2>📢 Notice Board</h2>
+            <p class="subtitle">Latest announcements from hostel administration</p>
+
+            <!-- FILTER -->
+             <div class="filter-bar">
+                <button class="filter-btn active" onclick="filterNotices('All')">All</button>
+                <button class="filter-btn" onclick="filterNotices('Urgent')">🔴 Urgent</button>
+                <button class="filter-btn" onclick="filterNotices('General')">🔵 General</button>
+                <button class="filter-btn" onclick="filterNotices('Events')">🟢 Events</button>
+                <button class="filter-btn" onclick="filterNotices('Maintenance')">🟡 Maintenance</button>
+             </div>
+        </div>
+
+        <!-- NOTICES LIST -->
+         <div id="notices-list">
+            <p class="loading">Loading notices...</p>
+         </div>
+      </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/notices.js"></script>
+
+</body>
+    
+</html>
