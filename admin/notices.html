@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Admin - Notices</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/notices.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>       
+        <div class="particle"></div>         
+        <div class="particle"></div>         
+        <div class="particle"></div>        
+        <div class="particle"></div>
+        <div class="particle"></div>         
+        <div class="particle"></div>
+    </div>
+
+    <!-- NAVBAR -->
+     <nav class="navbar">
+        <div class="nav-log">
+            <a href="dashboard.html">🏠 IITP Hostel Portal</a>
+        </div>
+        <div class="nav-user">
+            <div class="profile-circle">A</div>
+            <button onclick="logoutUser()">Logout</button>
+        </div>
+     </nav>
+
+     <!-- MAIN CONTENT -->
+     <div class="admin-container">
+
+        
+        <!-- POST NOTICE FORM -->
+        <div class="section-box">
+            <h2>📢 Post a Notice</h2>
+            <p class="subtitle">Fill in the details below</p>
+
+            <input type="text" id="notice-title" placeholder="Notice Title" />
+
+            <select id="notice-category">
+                <option value="">Select Category</option>
+                <option value="Urgent">🔴 Urgent</option>
+                <option value="General">🔵 General</option>
+                <option value="Events">🟢 Events</option>
+                <option value="Maintenance">🟡 Maintenance</option>
+            </select>
+
+            <textarea id="notice-message" placeholder="Write your notice here..."></textarea>
+
+            <button onclick="postNotice()">Post Notice</button>
+            <div id="msg" class="msg"></div>
+        </div>
+
+        <!-- ALL NOTICES -->
+        <div class="section-box">
+            <h2>📋 All Notices</h2>
+            <p class="subtitle">Manage posted notices</p>
+            <div id="notices-list">
+                <p class="loading">Loading...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/admin-notices.js"></script>
+
+
+     </div>
+</body>
+</html>
