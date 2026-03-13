@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Feedback</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="dashboard.html">🏠 IITP Hostel Portal</a>
+        </div>
+        <div class="nav-user">
+            <div class="profile-circle">A</div>
+            <button onclick="logoutUser()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="admin-complaints-container">
+
+        <div class="page-header">
+            <h2>📝 Student Feedback</h2>
+            <p class="subtitle">Anonymous feedback from students</p>
+        </div>
+
+        <!-- STATS -->
+        <div class="feedback-stats" id="feedback-stats">
+            <div class="stat-box">
+                <h3 id="avg-rating">0</h3>
+                <p>Average Rating</p>
+            </div>
+            <div class="stat-box">
+                <h3 id="total-feedback">0</h3>
+                <p>Total Feedback</p>
+            </div>
+        </div>
+
+        <!-- FILTER -->
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterFeedback('All')">All</button>
+            <button class="filter-btn" onclick="filterFeedback('Food')">🍽️ Food</button>
+            <button class="filter-btn" onclick="filterFeedback('Cleanliness')">🧹 Cleanliness</button>
+            <button class="filter-btn" onclick="filterFeedback('Security')">🔒 Security</button>
+            <button class="filter-btn" onclick="filterFeedback('Maintenance')">🔧 Maintenance</button>
+            <button class="filter-btn" onclick="filterFeedback('Staff')">👤 Staff</button>
+        </div>
+
+        <!-- FEEDBACK LIST -->
+        <div id="feedback-list">
+            <p class="loading">Loading feedback...</p>
+        </div>
+
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/admin-feedback.js"></script>
+
+</body>
+</html>

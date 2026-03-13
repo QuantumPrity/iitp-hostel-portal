@@ -98,3 +98,499 @@ textarea:focus {
 .delete-btn:hover {
     background: rgba(233, 69, 96, 0.2);
 }
+
+/* STATS GRID */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    animation: fadeInUp 0.5s ease;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(233, 69, 96, 0.3);
+}
+
+.stat-icon {
+    font-size: 2rem;
+}
+
+.stat-info h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.stat-info p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* CHARTS GRID */
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.chart-box {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 24px;
+    animation: fadeInUp 0.6s ease;
+}
+
+.chart-box h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* QUICK LINKS */
+.quick-links {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 24px;
+    animation: fadeInUp 0.7s ease;
+}
+
+.quick-links h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.link-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.link-card:hover {
+    background: rgba(233, 69, 96, 0.1);
+    border-color: rgba(233, 69, 96, 0.3);
+    color: #e94560;
+    transform: translateY(-3px);
+}
+
+/* DASHBOARD CONTAINER */
+.dashboard-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.welcome-section h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+/* ADMIN COMPLAINTS */
+.admin-complaints-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-header h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 4px;
+}
+
+/* ADMIN COMPLAINT CARD */
+.admin-complaint-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    animation: fadeInUp 0.5s ease;
+    transition: all 0.3s ease;
+}
+
+.admin-complaint-card:hover {
+    border-color: rgba(233, 69, 96, 0.3);
+    transform: translateY(-2px);
+}
+
+.complaint-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.complaint-top h4 {
+    color: #ffffff;
+    font-size: 1.05rem;
+    margin: 0 0 4px 0;
+}
+
+.student-email {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.82rem;
+    margin: 0;
+}
+
+.complaint-desc {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.complaint-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.complaint-date {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.8rem;
+}
+
+/* ACTION BUTTONS */
+.status-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    width: auto;
+    padding: 5px 12px;
+    margin: 0;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid;
+}
+
+.pending-btn {
+    background: rgba(255, 193, 7, 0.1);
+    border-color: rgba(255, 193, 7, 0.3);
+    color: #ffc107;
+}
+
+.pending-btn:hover {
+    background: rgba(255, 193, 7, 0.2);
+}
+
+.progress-btn {
+    background: rgba(33, 150, 243, 0.1);
+    border-color: rgba(33, 150, 243, 0.3);
+    color: #2196f3;
+}
+
+.progress-btn:hover {
+    background: rgba(33, 150, 243, 0.2);
+}
+
+.resolved-btn {
+    background: rgba(76, 175, 80, 0.1);
+    border-color: rgba(76, 175, 80, 0.3);
+    color: #4caf50;
+}
+
+.resolved-btn:hover {
+    background: rgba(76, 175, 80, 0.2);
+}
+
+/* ADMIN COMPLAINTS */
+.admin-complaints-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-header h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 4px;
+}
+
+/* ADMIN COMPLAINT CARD */
+.admin-complaint-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    animation: fadeInUp 0.5s ease;
+    transition: all 0.3s ease;
+}
+
+.admin-complaint-card:hover {
+    border-color: rgba(233, 69, 96, 0.3);
+    transform: translateY(-2px);
+}
+
+.complaint-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.complaint-top h4 {
+    color: #ffffff;
+    font-size: 1.05rem;
+    margin: 0 0 4px 0;
+}
+
+.student-email {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.82rem;
+    margin: 0;
+}
+
+.complaint-desc {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.complaint-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.complaint-date {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.8rem;
+}
+
+/* ACTION BUTTONS */
+.status-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    width: auto;
+    padding: 5px 12px;
+    margin: 0;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid;
+}
+
+.pending-btn {
+    background: rgba(255, 193, 7, 0.1);
+    border-color: rgba(255, 193, 7, 0.3);
+    color: #ffc107;
+}
+
+.pending-btn:hover {
+    background: rgba(255, 193, 7, 0.2);
+}
+
+.progress-btn {
+    background: rgba(33, 150, 243, 0.1);
+    border-color: rgba(33, 150, 243, 0.3);
+    color: #2196f3;
+}
+
+.progress-btn:hover {
+    background: rgba(33, 150, 243, 0.2);
+}
+
+.resolved-btn {
+    background: rgba(76, 175, 80, 0.1);
+    border-color: rgba(76, 175, 80, 0.3);
+    color: #4caf50;
+}
+
+.resolved-btn:hover {
+    background: rgba(76, 175, 80, 0.2);
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    width: auto;
+    padding: 8px 20px;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: rgba(233, 69, 96, 0.1);
+    border-color: rgba(233, 69, 96, 0.4);
+    color: #e94560;
+}
+
+.filter-btn.active {
+    background: rgba(233, 69, 96, 0.15);
+    border-color: #e94560;
+    color: #e94560;
+}
+
+/* FEEDBACK STATS */
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-logo {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-user span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.nav-user button {
+    width: auto;
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    margin: 0;
+    background: transparent;
+    border: 1px solid rgba(233, 69, 96, 0.5);
+    color: #e94560;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-user button:hover {
+    background: rgba(233, 69, 96, 0.1);
+}
+
+.profile-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e94560, #c23152);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.feedback-stats {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.stat-box h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin: 0 0 4px 0;
+}
+
+.stat-box p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.rating-display {
+    font-size: 1.1rem;
+}

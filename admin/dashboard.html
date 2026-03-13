@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - IITP Hostel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="dashboard.html">🏠 IITP Hostel Portal</a>
+        </div>
+        <div class="nav-user">
+            <div class="profile-circle">A</div>
+            <button onclick="logoutUser()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+
+        <div class="welcome-section">
+            <h1>👋 Admin Dashboard</h1>
+            <p class="subtitle">Manage hostel operations from here</p>
+        </div>
+
+        <!-- STATS CARDS -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">🔧</div>
+                <div class="stat-info">
+                    <h3 id="total-complaints">0</h3>
+                    <p>Total Complaints</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <div class="stat-info">
+                    <h3 id="pending-complaints">0</h3>
+                    <p>Pending</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-info">
+                    <h3 id="resolved-complaints">0</h3>
+                    <p>Resolved</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📝</div>
+                <div class="stat-info">
+                    <h3 id="total-feedback">0</h3>
+                    <p>Feedback</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHARTS -->
+        <div class="charts-grid">
+            <div class="chart-box">
+                <h3>📊 Complaints by Type</h3>
+                <canvas id="complaintsChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h3>⭐ Feedback Ratings</h3>
+                <canvas id="ratingsChart"></canvas>
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="quick-links">
+            <h3>Quick Actions</h3>
+            <div class="links-grid">
+                <a href="complaints.html" class="link-card">🔧 Manage Complaints</a>
+                <a href="notices.html" class="link-card">📢 Post Notices</a>
+                <a href="cleanliness.html" class="link-card">🧹 Log Cleanliness</a>
+                <a href="feedback.html" class="link-card">📝 View Feedback</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/admin-dashboard.js"></script>
+
+</body>
+</html>

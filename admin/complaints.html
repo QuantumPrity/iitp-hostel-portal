@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Complaints</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/complaints.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="dashboard.html">🏠 IITP Hostel Portal</a>
+        </div>
+        <div class="nav-user">
+            <div class="profile-circle">A</div>
+            <button onclick="logoutUser()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="admin-complaints-container">
+
+        <div class="page-header">
+            <h2>🔧 Manage Complaints</h2>
+            <p class="subtitle">Update status of student complaints</p>
+        </div>
+
+        <!-- FILTER BAR -->
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterComplaints('All')">All</button>
+            <button class="filter-btn" onclick="filterComplaints('Pending')">⏳ Pending</button>
+            <button class="filter-btn" onclick="filterComplaints('In Progress')">🔄 In Progress</button>
+            <button class="filter-btn" onclick="filterComplaints('Resolved')">✅ Resolved</button>
+            <button class="filter-btn" onclick="filterComplaints('Overdue')">⚠️ Overdue</button>
+        </div>
+
+        <!-- COMPLAINTS LIST -->
+        <div id="complaints-list">
+            <p class="loading">Loading complaints...</p>
+        </div>
+
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/admin-complaints.js"></script>
+
+</body>
+</html>
