@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - IITP Hostel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/feedback.css">
+</head>
+<body>
+
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="dashboard.html">🏠 IITP Hostel Portal</a>
+        </div>
+        <div class="nav-user">
+            <div class="profile-circle">P</div>
+            <button onclick="logoutUser()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="feedback-container">
+
+        <div class="feedback-header">
+            <h2>📝 Anonymous Feedback</h2>
+            <p class="subtitle">Your identity is completely hidden</p>
+        </div>
+
+        <!-- FEEDBACK FORM -->
+        <div class="feedback-box">
+            <h3>Share your feedback</h3>
+
+            <select id="feedback-category">
+                <option value="">Select Category</option>
+                <option value="Food">🍽️ Food Quality</option>
+                <option value="Cleanliness">🧹 Cleanliness</option>
+                <option value="Security">🔒 Security</option>
+                <option value="Maintenance">🔧 Maintenance</option>
+                <option value="Staff">👤 Staff Behaviour</option>
+                <option value="Other">💬 Other</option>
+            </select>
+
+            <!-- RATING -->
+            <div class="rating-box">
+                <p>Rate your experience:</p>
+                <div class="stars">
+                    <span onclick="setRating(1)">⭐</span>
+                    <span onclick="setRating(2)">⭐</span>
+                    <span onclick="setRating(3)">⭐</span>
+                    <span onclick="setRating(4)">⭐</span>
+                    <span onclick="setRating(5)">⭐</span>
+                </div>
+                <p id="rating-text">Not rated</p>
+            </div>
+
+            <textarea id="feedback-msg" placeholder="Write your feedback here... (completely anonymous)"></textarea>
+            <button onclick="submitFeedback()">Submit Anonymously 🔒</button>
+            <div id="msg" class="msg"></div>
+        </div>
+
+        <!-- ANONYMOUS NOTE -->
+        <div class="anon-note">
+            <p>🔒 Your name and email are <strong>never stored</strong>. Feedback is completely anonymous.</p>
+        </div>
+
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/feedback.js"></script>
+
+</body>
+</html>
