@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleanliness - IITP Hostel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cleanliness.css">
+</head>
+<body>
+
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="dashboard.html">🏠 IITP Hostel Portal</a>
+        </div>
+        <div class="nav-user">
+            <div class="profile-circle">P</div>
+            <button onclick="logoutUser()">Logout</button>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="cleanliness-container">
+
+        <div class="clean-header">
+            <h2>🧹 Cleanliness Status</h2>
+        </div>
+
+        <!-- MY ROOM STATUS -->
+        <div class="status-card" id="my-room-status">
+            <div class="status-icon" id="status-icon">⏳</div>
+            <h3 id="status-title">Checking your room status...</h3>
+            <p id="status-desc">Please wait</p>
+            <p id="status-date"></p>
+        </div>
+
+        <!-- REPORT ISSUE -->
+        <div class="report-box">
+            <h3>⚠️ Report Cleaning Issue</h3>
+            <p class="subtitle">Was your room skipped or not cleaned properly?</p>
+            <input type="text" id="room-no" placeholder="Your Room Number (e.g. A-101)" />
+            <textarea id="issue-desc" placeholder="Describe the issue..."></textarea>
+            <button onclick="reportIssue()">Report Issue</button>
+            <div id="msg" class="msg"></div>
+        </div>
+
+        <!-- CLEANING HISTORY -->
+        <div class="history-box">
+            <h3>📅 Recent Cleaning Log</h3>
+            <p class="subtitle">Last 7 days cleaning record</p>
+            <div id="cleaning-history">
+                <p class="loading">Loading...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/cleanliness.js"></script>
+
+</body>
+</html>

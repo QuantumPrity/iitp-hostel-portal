@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Cleanliness</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cleanliness.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="dashboard.html">🏠 IITP Hostel Portal</a>
+        </div>
+        <div class="nav-user">
+            <div class="profile-circle">A</div>
+            <button onclick="logoutUser()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+
+        <!-- LOG CLEANING -->
+        <div class="section-box">
+            <h2>🧹 Log Cleaning</h2>
+            <p class="subtitle">Mark rooms as cleaned or skipped</p>
+
+            <input type="text" id="room-no" placeholder="Room Number (e.g. A-101)" />
+            <input type="text" id="student-uid" placeholder="Student Email" />
+
+            <select id="clean-status">
+                <option value="">Select Status</option>
+                <option value="Cleaned">✅ Cleaned</option>
+                <option value="Skipped">❌ Skipped</option>
+            </select>
+
+            <button onclick="logCleaning()">Log Cleaning</button>
+            <div id="msg" class="msg"></div>
+        </div>
+
+        <!-- TODAY'S LOG -->
+        <div class="section-box">
+            <h2>📋 Today's Log</h2>
+            <p class="subtitle">Rooms logged today</p>
+            <div id="today-log">
+                <p class="loading">Loading...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/admin-cleanliness.js"></script>
+
+</body>
+</html>
